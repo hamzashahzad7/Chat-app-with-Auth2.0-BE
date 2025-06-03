@@ -14,5 +14,6 @@ model Message {
   content   String
   sender    String
   room      String
+  sentiment String?  // 👈 Added sentiment field (optional)
   createdAt DateTime @default(now())
 }
