@@ -8,12 +8,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// model Users {
+//   id       Int       @id @default(autoincrement())
+//   name     String
+//   email    String
+//   messages Message[] // lowercased for convention
+// }
 
 model Message {
   id        Int      @id @default(autoincrement())
   content   String
   sender    String
   room      String
-  sentiment String?  // 👈 Added sentiment field (optional)
+  sentiment String?
+  // userId    Int
+  // user      Users    @relation(fields: [userId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
 }

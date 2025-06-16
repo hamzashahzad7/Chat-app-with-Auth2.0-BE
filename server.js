@@ -4,7 +4,6 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 const prisma = require("./utils/prisma-config");
 const getSentiment = require("./utils/getSentiment"); // Hugging Face sentiment util
-
 const app = express();
 const server = http.createServer(app);
 
